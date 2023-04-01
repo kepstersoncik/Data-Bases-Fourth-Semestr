@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\CPP_S4DB_LW6E1.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\CPP_S4DB_LW6E1.dir/objects.a @CMakeFiles\CPP_S4DB_LW6E1.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -DQT_QML_DEBUG -g -mwindows -Wl,--whole-archive CMakeFiles\CPP_S4DB_LW6E1.dir/objects.a -Wl,--no-whole-archive -o CPP_S4DB_LW6E1.exe -Wl,--out-implib,libCPP_S4DB_LW6E1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CPP_S4DB_LW6E1.dir\linkLibs.rsp
