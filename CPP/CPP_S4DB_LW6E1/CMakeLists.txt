@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS sql)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -21,6 +22,18 @@ set(PROJECT_SOURCES
         mainwindow.h
         postgreconnection.cpp
         postgreconnection.h
+        dbconnectionsettingsdialog.h
+        dbconnectionsettingsdialog.cpp
+        connectiondata.h
+        connectiondata.cpp
+        querydialog.h
+        querydialog.cpp
+        insertquerydialog.h
+        insertquerydialog.cpp
+        updatequerydialog.h
+        updatequerydialog.cpp
+        deletequerydialog.h
+        deletequerydialog.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -48,6 +61,7 @@ endif()
 
 target_link_libraries(CPP_S4DB_LW6E1 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(CPP_S4DB_LW6E1 PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(CPP_S4DB_LW6E1 PRIVATE Qt${QT_VERSION_MAJOR}::Network)
 
 set_target_properties(CPP_S4DB_LW6E1 PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
