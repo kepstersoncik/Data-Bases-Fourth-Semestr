@@ -17,8 +17,6 @@
 #include <QStandardItemModel>
 #include <QStandardItem>
 
-//#include <QSql/
-
 #include <QComboBox>
 #include <QLabel>
 #include <QLineEdit>
